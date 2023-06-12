@@ -1,12 +1,7 @@
 from cryptography.fernet import Fernet
 
-# file1 = open("filekey.key", "r")
-
-# key = file1.read()
-
-# file1.close()
-
 def Dec(root):
+	# open file containing key
 	with open('filekey.key', 'rb') as filekey:
 		key = filekey.read()
 
