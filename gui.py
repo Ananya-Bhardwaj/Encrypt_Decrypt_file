@@ -8,13 +8,13 @@ root.title('Encrypt_Decrypt File')
 root.geometry("400x400")
 
 def Encrypt():
-    root.filename = filedialog.askopenfilename(initialdir="/Users", title="Upload the file", filetypes=(("txt files", "*.txt"), ("all files", "*.*")))
+    root.filename = filedialog.askopenfilename(title="Upload the file", filetypes=(("txt files", "*.txt"), ("all files", "*.*")))
     Enc(root)
     myLabel = Label(root, text = "File encrypted sucessfully and key saved to filekey.key")
     myLabel.pack()
 
 def Decrypt():
-    root.filename = filedialog.askopenfilename(initialdir="/Users", title="Upload the file", filetypes=(("txt files", "*.txt"), ("all files", "*.*")))
+    root.filename = filedialog.askopenfilename(title="Upload the file", filetypes=(("txt files", "*.txt"), ("all files", "*.*")))
     Dec(root)
     myLabel = Label(root, text="File has been decrypted successfully")
     myLabel.pack()
