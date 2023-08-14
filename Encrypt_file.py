@@ -4,7 +4,7 @@ from tkinter import filedialog
 
 def Enc(root):
    # generating a key
-   key = keygen(); 
+   key = keygen(root); 
    
    fernet = Fernet(key)
  
