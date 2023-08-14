@@ -1,9 +1,6 @@
 from cryptography.fernet import Fernet
 
-def Dec(root):
-	# open file containing key
-	with open('filekey.key', 'rb') as filekey:
-		key = filekey.read()
+def Dec(key, root):
 
 	fernet = (Fernet(key))
 
