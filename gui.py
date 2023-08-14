@@ -43,6 +43,7 @@ def Decrypt():
     root.filename = filedialog.askopenfilename(title="Upload the file", filetypes=(("txt files", "*.txt"), ("all files", "*.*")))
     key_user_entry = Entry(root, width=50, show = "*", textvariable=keyuser_var)
     submitButton = Button(root, text="Submit", command=submit, fg="blue", bg="#000000")
+    key_user_entry.delete(0, END)
     key_user_entry.pack()
     submitButton.pack()
 
