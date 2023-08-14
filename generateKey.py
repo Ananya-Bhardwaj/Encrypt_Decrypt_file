@@ -1,17 +1,14 @@
 from cryptography.fernet import Fernet
+from csv import writer
 
-def keygen():
+def keygen(root):
     key = Fernet.generate_key()
+    List = [root.filename, key]
 
-    # file1 = open("filekey.key", "w")
-
-    # file1.write(str(key))
-
-    # file1.close()
-
-    with open('filekey.key', 'wb') as filekey:
-        filekey.write(key)
-
-    print("Key written to filekey.key")
+    
+    with open('key.csv', 'a') as filekey:
+        writer_obj = writer(filekey)
+        writer_obj.writerow(List)
+        filekey.close()
 
     return key
